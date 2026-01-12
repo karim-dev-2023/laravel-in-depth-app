@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('amount');
             $table->string('status');
             $table->timestamps();
-            $table->unique('user_id'); // One-to-One : une seul « address » par user
+           
         });
     }
 

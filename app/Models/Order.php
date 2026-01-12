@@ -8,7 +8,7 @@ class Order extends Model
 {
     protected $fillable = ['amount', 'status'];
 
-    public function post()
+    public function user()
     {
         return $this->belongsTo(User::class); // La commande appartient à un utilisateur
     }

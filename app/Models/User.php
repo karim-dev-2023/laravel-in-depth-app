@@ -52,7 +52,7 @@ class User extends Authenticatable
         return $this->hasOne(Settings::class);
     }
 
-    public function comments()
+    public function orders()
     {
         return $this->hasMany(Order::class); // Un utilisateurs possède plusieurs commandes.
     }
