@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Relation pour la table Settings
+    public function settings(){
+        return $this->hasOne(Settings::class);
+    }
 }
