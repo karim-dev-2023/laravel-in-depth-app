@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Order::class); // Un utilisateurs possède plusieurs commandes.
     }
+
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class)->withTimestamps();
+    }
 }
