@@ -47,7 +47,13 @@ class User extends Authenticatable
     }
 
     // Relation pour la table Settings
-    public function settings(){
+    public function settings()
+    {
         return $this->hasOne(Settings::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Order::class); // Un utilisateurs possède plusieurs commandes.
     }
 }

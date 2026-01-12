@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Order extends Model
+{
+    protected $fillable = ['amount', 'status'];
+
+    public function post()
+    {
+        return $this->belongsTo(User::class); // La commande appartient à un utilisateur
+    }
+}
