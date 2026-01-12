@@ -17,8 +17,6 @@ class SettingsSeeder extends Seeder
             'lang'  => 'fr'
         ]);
 
-        $this->call([
-            SettingsSeeder::class,
-        ]);
+        
     }
 }
