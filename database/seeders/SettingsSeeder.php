@@ -16,5 +16,9 @@ class SettingsSeeder extends Seeder
             'theme' => 'dark',
             'lang'  => 'fr'
         ]);
+
+        $this->call([
+            SettingsSeeder::class,
+        ]);
     }
 }
