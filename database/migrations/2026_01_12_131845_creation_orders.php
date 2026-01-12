@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id') // Mise en place de la clé étrangère
                 ->constrained('users')
                 ->cascadeOnDelete();
-            $table->string('amount');
+            $table->integer('amount');
             $table->string('status');
             $table->timestamps();
            
