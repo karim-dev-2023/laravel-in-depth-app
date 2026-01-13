@@ -9,15 +9,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->unsignedBigInteger('orderable_id');
-            $table->string('orderable_type');
+            $table->morphs('orderable');
         });
     }
 
     public function down(): void
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn(['orderable_id', 'orderable_type']);
-        });
+        Schema::dropIfExists('orders');
     }
 };
