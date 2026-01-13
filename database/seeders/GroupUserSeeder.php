@@ -22,6 +22,6 @@ class GroupUserSeeder extends Seeder
         $user = User::where('email', 'test@example.com')->first();
 
         // Attacher l'utilisateur au groupe
-        $group->users()->syncWithoutDetaching([$user->id]);
+        $group->users()->attach([$user->id]);
     }
 }
