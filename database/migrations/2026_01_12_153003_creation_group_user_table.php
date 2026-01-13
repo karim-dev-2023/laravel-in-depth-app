@@ -20,7 +20,7 @@ return new class extends Migration
                 ->constrained('groups')
                 ->cascadeOnDelete();
             $table->timestamps();
-            $table->unique(['user_id', 'group_id']); 
+            $table->unique(['user_id', 'group_id']);
         });
     }
 
