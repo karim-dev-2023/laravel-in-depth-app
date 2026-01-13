@@ -14,11 +14,14 @@ class GroupUserSeeder extends Seeder
      */
     public function run(): void
     {
-        $group = Group::create(["name" => "Family"]);
+        $group = Group::firstOrCreate([
+            'name' => 'Family'
+        ]);
 
-        // Récupérations de tout les utilisateurs
-        $userIds = User::query()->pluck('id')->all();
 
-        $group->users()->syncWithoutDetaching($userIds);
+        $user = User::where('email', 'test@example.com')->first();
+
+        // Attacher l'utilisateur au groupe
+        $group->users()->syncWithoutDetaching([$user->id]);
     }
 }
