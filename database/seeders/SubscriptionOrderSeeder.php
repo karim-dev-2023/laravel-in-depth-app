@@ -11,7 +11,7 @@ class SubscriptionOrderSeeder extends Seeder
     {
         SubscriptionOrder::create([
             'name'            => 'Coaching Mensuel',
-            'price'           => 29.99,
+            'price'           => 29,
             'duration_months' => 1,
         ]);
     }

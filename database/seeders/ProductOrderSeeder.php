@@ -11,7 +11,7 @@ class ProductOrderSeeder extends Seeder
     {
         ProductOrder::create([
             'name'  => 'Pack Photoshop',
-            'price' => 59.99,
+            'price' => 59,
         ]);
     }
 }

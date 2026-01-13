@@ -15,6 +15,6 @@ class SubscriptionOrder extends Model
 
     public function orders()
     {
-        return $this->morphMany(Order::class, 'commandable');
+        return $this->morphMany(Order::class, 'orderable');
     }
 }
