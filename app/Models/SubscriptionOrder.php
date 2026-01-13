@@ -6,14 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubscriptionOrder extends Model
 {
-     /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
+
     protected $fillable = [
         'name',
         'price',
         'duration_months',
     ];
+
+    public function orders()
+    {
+        return $this->morphMany(Order::class, 'commandable');
+    }
 }

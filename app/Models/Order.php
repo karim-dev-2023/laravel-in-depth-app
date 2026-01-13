@@ -12,4 +12,9 @@ class Order extends Model
     {
         return $this->belongsTo(User::class); // La commande appartient à un utilisateur
     }
+
+    public function commandable()
+    {
+        return $this->morphTo(); // L'ordre "appartient" à ProductOrder ou SubscriptionOrder
+    }
 }

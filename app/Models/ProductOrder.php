@@ -10,4 +10,9 @@ class ProductOrder extends Model
         'name',
         'price',
     ];
+
+    public function orders()
+    {
+        return $this->morphMany(Order::class, 'commandable'); 
+    }
 }
