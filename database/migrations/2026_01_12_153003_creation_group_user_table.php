@@ -18,9 +18,10 @@ return new class extends Migration
                 ->cascadeOnDelete();
             $table->foreignId('group_id') // Mise en place de la clé étrangère
                 ->constrained('groups')
-                ->cascadeOnDelete();  
-                $table->timestamps();
-
+                ->cascadeOnDelete();
+            $table->timestamps();
+            $table->unique('user_id');
+            $table->unique('group_id');
         });
     }
 
